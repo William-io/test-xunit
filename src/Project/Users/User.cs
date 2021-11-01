@@ -11,12 +11,14 @@
         public string Name { get; set; }
         public int Age { get; set; }
 
-
-        public object IsOfLegalAge()
+        private int LegalAge = 18;
+        public bool IsOfLegalAge()
         {
+            if (Age < LegalAge)
+                return false;
+
             return true;
+
         }
-
-
     }
 }
